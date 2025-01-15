@@ -21,6 +21,18 @@ router.get('/query/:term', async (req, res) => {
       res.status(500).json({ error: 'Error fetching images' });
     }
   });
+
+  // Recent search
+router.get('/recent', async (req, res) => {
+  try {
+    const recentSearches = await Search.find().sort({ date: -1 }).limit(10);
+    res.json(recentSearches);
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ error: 'Error with recent' });
+  }
+});
+
   
 
   
