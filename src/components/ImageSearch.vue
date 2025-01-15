@@ -62,6 +62,20 @@
           this.loading = false;
         }
       },
+
+/*
+      async fetchRecentSearches() {
+  try {
+    const response = await axios.get('http://localhost:5000/api/recent');
+    console.log(response.data);
+  } catch (err) {
+    console.error('Failed to fetch', err);
+  }
+}
+*/
+
+
+
     },
   };
   </script>
