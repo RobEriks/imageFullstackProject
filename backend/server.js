@@ -17,7 +17,7 @@ app.use(cors());
 
 app.use('/api', imageRoutes);
 
-// Databas connect
+// Databas connection with env
 mongoose
   .connect(process.env.MONGO_URI)
   .then(() => console.log('MongoDB connected'))
