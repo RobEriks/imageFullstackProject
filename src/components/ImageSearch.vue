@@ -53,7 +53,7 @@
         this.loading = true;
         this.error = '';
         try {
-          const response = await axios.get(`http://localhost:5000/api/query/${this.searchTerm}`);
+          const response = await axios.get(`https://imagefullstackproject.onrender.com/api/query/${this.searchTerm}`);
           this.images = response.data.images;
         } catch (err) {
           console.error(err);
